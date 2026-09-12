@@ -52,6 +52,15 @@ nombre `raylang`:
 No hay que compilar nada: el `.sublime-syntax` es declarativo (a diferencia del cliente de
 VSCode, que sí es TypeScript a compilar).
 
+## Tests de la gramática (`tests/syntax_test_raylang.ray`)
+
+La gramática trae sus aserciones en el formato estándar de Sublime: cada línea de código va
+seguida de comentarios `// ^^^ scope` con el scope esperado en esas columnas (881 aserciones
+sobre todos los contextos). Para ejecutarlas, abre el archivo con el paquete instalado y lanza
+**Build** (`Ctrl/Cmd+B`): el panel lista cada aserción que falla con su línea y columna. El
+archivo es además un programa raylang válido; en el repo de raylang el CI lo compila y comprueba
+que cada scope exista también en la gramática de VSCode (comparten scopes).
+
 ## Diagnósticos en vivo (Language Server)
 
 Sublime Text 4 **no trae LSP de fábrica**: usa el paquete **LSP** de
