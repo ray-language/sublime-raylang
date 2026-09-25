@@ -120,3 +120,11 @@ El servidor implementa el núcleo del protocolo: **diagnósticos** en vivo, **ho
 **outline de símbolos** (*Goto Symbol in File*) y **resaltado de ocurrencias** del símbolo bajo el
 cursor. El paquete LSP de Sublime los expone sin configuración extra una vez declarado el cliente
 (`K` para hover, "Goto Definition", "Goto Symbol", "LSP: Format File", etc.).
+
+## Icono de archivo
+
+Desde Sublime Text 4206 los iconos de archivo van por `.sublime-file-icons`: el paquete trae
+`Default`, `Default Dark` y `Adaptive.sublime-file-icons`, que mapean la extensión `ray` a las
+texturas de `icons/` (`file_type_raylang` para fondo claro, `file_type_raylang_dark` para oscuro;
+1×, `@2x` y `@3x`). Con otro tema, copia una de las tres a `Packages/User/<Tema>.sublime-file-icons`.
+
